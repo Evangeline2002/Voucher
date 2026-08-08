@@ -162,7 +162,7 @@ textarea:focus {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
