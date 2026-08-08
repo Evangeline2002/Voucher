@@ -1,4 +1,5 @@
 import React from 'react';
+import jodLogo from '../assets/jod.jpeg';
 
 const VoucherPreview = ({ data }) => {
     return (
@@ -8,11 +9,7 @@ const VoucherPreview = ({ data }) => {
                 {/* Header Sub-section */}
                 <div className="voucher-header">
                     <div className="company-info">
-                        {data.logo ? (
-                            <img src={data.logo} alt="Company Logo" className="company-logo" />
-                        ) : (
-                            <div className="logo-placeholder">LOGO</div>
-                        )}
+                        <img src={jodLogo} alt="Company Logo" className="company-logo" />
                         <div className="company-text">
                             <h1 className="company-name">{data.companyName || 'Company Name'}</h1>
                             <p className="company-address">{data.companyAddress || 'Enter company address'}</p>

@@ -16,11 +16,7 @@ const CompanyDetails = ({ data, onChange }) => {
         <fieldset className="form-section">
             <legend>Company Details</legend>
             <div className="form-group row">
-                <div className="field">
-                    <label>Company Logo</label>
-                    <input type="file" accept="image/*" onChange={handleLogoUpload} />
-                </div>
-                <div className="field">
+                <div className="field full-width">
                     <label>Company Name</label>
                     <input type="text" placeholder="e.g. Acme Corp" value={data.companyName} onChange={e => onChange({ ...data, companyName: e.target.value })} />
                 </div>
