@@ -25,9 +25,7 @@ const defaultData = {
   purpose: '',
   remarks: '',
 
-  preparedBy: '',
-  checkedBy: '',
-  approvedBy: '',
+  authorizedBy: '',
   receiverName: ''
 };
 

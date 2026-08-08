@@ -10,22 +10,12 @@ const SignatureSection = ({ data, onChange }) => {
             <legend>Signature Details</legend>
             <div className="form-group row">
                 <div className="field">
-                    <label>Prepared By</label>
-                    <input type="text" placeholder="Name" value={data.preparedBy} onChange={e => setField('preparedBy', e.target.value)} />
+                    <label>Authorized By</label>
+                    <input type="text" placeholder="Name" value={data.authorizedBy || ''} onChange={e => setField('authorizedBy', e.target.value)} />
                 </div>
                 <div className="field">
-                    <label>Checked By</label>
-                    <input type="text" placeholder="Name" value={data.checkedBy} onChange={e => setField('checkedBy', e.target.value)} />
-                </div>
-            </div>
-            <div className="form-group row">
-                <div className="field">
-                    <label>Approved By</label>
-                    <input type="text" placeholder="Name" value={data.approvedBy} onChange={e => setField('approvedBy', e.target.value)} />
-                </div>
-                <div className="field">
-                    <label>Receiver Name</label>
-                    <input type="text" placeholder="Name" value={data.receiverName} onChange={e => setField('receiverName', e.target.value)} />
+                    <label>Receiver Signature</label>
+                    <input type="text" placeholder="Name" value={data.receiverName || ''} onChange={e => setField('receiverName', e.target.value)} />
                 </div>
             </div>
         </fieldset>

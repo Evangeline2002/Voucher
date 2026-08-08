@@ -388,13 +388,27 @@ textarea:focus {
 @media screen and (max-width: 1200px) {
   .main-layout {
     flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .voucher-preview-container {
-    zoom: 0.7;
+    zoom: 0.45;
     /* Scale down for better mobile view */
+  }
+
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
   }
 }
 

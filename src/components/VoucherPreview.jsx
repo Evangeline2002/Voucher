@@ -80,24 +80,14 @@ const VoucherPreview = ({ data }) => {
 
                 {/* Signatures */}
                 <div className="voucher-signatures">
-                    <div className="signature-box">
+                    <div className="signature-box" style={{ width: '45%' }}>
                         <div className="sig-line"></div>
-                        <p className="sig-title">Prepared By</p>
-                        <p className="sig-name">{data.preparedBy || 'Signature'}</p>
+                        <p className="sig-title">Authorized Signatory</p>
+                        <p className="sig-name">{data.authorizedBy || 'Signature'}</p>
                     </div>
-                    <div className="signature-box">
+                    <div className="signature-box" style={{ width: '45%' }}>
                         <div className="sig-line"></div>
-                        <p className="sig-title">Checked By</p>
-                        <p className="sig-name">{data.checkedBy || 'Signature'}</p>
-                    </div>
-                    <div className="signature-box">
-                        <div className="sig-line"></div>
-                        <p className="sig-title">Approved By</p>
-                        <p className="sig-name">{data.approvedBy || 'Signature'}</p>
-                    </div>
-                    <div className="signature-box">
-                        <div className="sig-line"></div>
-                        <p className="sig-title">Receiver</p>
+                        <p className="sig-title">Receiver's Signature</p>
                         <p className="sig-name">{data.receiverName || 'Signature'}</p>
                     </div>
                 </div>
