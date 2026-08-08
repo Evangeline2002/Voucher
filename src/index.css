@@ -1,0 +1,6 @@
+/* Clean base reset for our modern layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
