@@ -384,6 +384,10 @@ textarea:focus {
   padding-top: 10px;
 }
 
+.mobile-tabs {
+  display: none;
+}
+
 /* Responsive Layout */
 @media screen and (max-width: 1200px) {
   .main-layout {
@@ -394,6 +398,44 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
+  .mobile-tabs {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
+
+  .tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tab-btn.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background: var(--highlight-color);
+  }
+
+  .main-layout {
+    padding-bottom: 80px;
+    /* space for tabs */
+  }
+
+  section.mobile-hidden {
+    display: none !important;
+  }
+
   .voucher-preview-container {
     zoom: 0.45;
     /* Scale down for better mobile view */

@@ -31,6 +31,7 @@ const defaultData = {
 
 function App() {
   const [data, setData] = useState(defaultData);
+  const [mobileTab, setMobileTab] = useState('form');
 
   useEffect(() => {
     const draft = loadVoucherDraft();
@@ -79,7 +80,7 @@ function App() {
         <h1>Payment Voucher Management</h1>
       </header>
       <main className="main-layout">
-        <section className="left-panel">
+        <section className={`left-panel ${mobileTab === 'preview' ? 'mobile-hidden' : ''}`}>
           <PaymentVoucherForm
             data={data}
             onChange={handleChange}
@@ -89,10 +90,19 @@ function App() {
             onDownloadPDF={handleDownloadPDF}
           />
         </section>
-        <section className="right-panel">
+        <section className={`right-panel ${mobileTab === 'form' ? 'mobile-hidden' : ''}`}>
           <VoucherPreview data={data} />
         </section>
       </main>
+
+      <div className="mobile-tabs hide-on-print">
+        <button className={`tab-btn ${mobileTab === 'form' ? 'active' : ''}`} onClick={() => setMobileTab('form')}>
+          Edit Form
+        </button>
+        <button className={`tab-btn ${mobileTab === 'preview' ? 'active' : ''}`} onClick={() => setMobileTab('preview')}>
+          See Preview
+        </button>
+      </div>
     </div>
   );
 }
